@@ -2,21 +2,26 @@
 let userInput = prompt("What would you like to do?");
 const todoArr = [];
 
-console.log(userInput);
 //userInput is then passed through this while loop
 //checking it against the conditionals
 while(userInput !== "quit") {
-    userInput = prompt("What would you like to do?");
-    
     if(userInput === "new") {
-        console.log("new")
-        // todoArr.push(userInput);
+        let newTodo = prompt("Enter a new todo");
+        todoArr.push(newTodo);
+        userInput = prompt("What would you like to do next?");
     }
-    if(userInput === "list") {
-        // console.log(todoArr);
-        console.log("list");
+    else if(userInput === "list") {
+        for(let i=0; i<todoArr.length; i++) {
+            console.log(`${i}: ${todoArr[i]}`);
+        }
+        console.log("*************");
+        userInput = prompt("What would you like to do next?");
     }
-    if(userInput === "delete") {
+    else if(userInput === "delete") {
         console.log("delete");
+        userInput = prompt("What would you like to do next?");
+    }
+    else {
+        userInput = promt("That was not a valid command. Please try again");
     }
 }
