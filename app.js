@@ -6,7 +6,7 @@ console.log(userInput);
 //userInput is then passed through this while loop
 //checking it against the conditionals
 while(userInput !== "quit") {
-    // userInput = prompt("What would you like to do?");
+    userInput = prompt("What would you like to do?");
     
     if(userInput === "new") {
         console.log("new")
